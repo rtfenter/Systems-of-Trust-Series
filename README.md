@@ -42,6 +42,12 @@ A tiny governance checker that validates a single JSON event against required fi
 - **Live Demo:** https://rtfenter.github.io/Event-Quality-Scanner/  
 - **Repo:** https://github.com/rtfenter/Event-Quality-Scanner
 
+### • Truth Drift Map — System Edition  
+A visual map of how meaning, schema, and invariants drift across services and versions in distributed systems.
+
+- **Live Demo:** https://rtfenter.github.io/Truth-Drift-Map  
+- **Repo:** https://github.com/rtfenter/Truth-Drift-Map
+
 ---
 
 ## Purpose of This Series  
