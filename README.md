@@ -36,6 +36,12 @@ A small interactive tool comparing two JSON events for naming, typing, and struc
 - **Live Demo:** https://rtfenter.github.io/Event-Consistency-Checker/  
 - **Repo:** https://github.com/rtfenter/Event-Consistency-Checker
 
+### • Event Quality Scanner  
+A tiny governance checker that validates a single JSON event against required fields, type rules, naming conventions, and domain constraints.
+
+- **Live Demo:** https://rtfenter.github.io/Event-Quality-Scanner/  
+- **Repo:** https://github.com/rtfenter/Event-Quality-Scanner
+
 ---
 
 ## Purpose of This Series  
