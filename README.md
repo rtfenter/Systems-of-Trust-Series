@@ -27,7 +27,7 @@ Core essays in the Systems of Trust Series:
 
 ---
 
-## Projects (In Progress)  
+## Projects 
 These projects each have their own repo and contribute to the broader Systems of Trust portfolio.
 
 ### • Event Consistency Checker  
