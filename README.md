@@ -56,6 +56,6 @@ This series aims to make that trust **legible** and **actionable** through small
 
 ---
 
-## 🧩 About This Repo  
+## About This Repo  
 This repository is the **series hub** for Systems of Trust — writing, diagrams, prototypes, and system investigations.  
 It will evolve through consistent, intentional contributions over time.
