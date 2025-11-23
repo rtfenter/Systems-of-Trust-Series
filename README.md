@@ -8,7 +8,7 @@ My goal: translate abstract trust & governance concepts into practical tools and
 
 ---
 
-## 📘 Writing  
+## Writing  
 Core essays in the Systems of Trust Series:
 
 - **[Designing for Truth: Event Contracts as Product Design](https://medium.com/@rtfenter/designing-for-truth-event-contracts-as-product-design-bf9e1feb9189)**  
@@ -27,7 +27,7 @@ Core essays in the Systems of Trust Series:
 
 ---
 
-## 🧪 Projects (In Progress)  
+## Projects (In Progress)  
 These projects each have their own repo and contribute to the broader Systems of Trust portfolio.
 
 ### • Event Consistency Checker  
@@ -38,7 +38,7 @@ A small interactive tool comparing two JSON events for naming, typing, and struc
 
 ---
 
-## 🎯 Purpose of This Series  
+## Purpose of This Series  
 Trust in distributed systems isn’t just about protocols or validation.  
 It emerges from:  
 - shared language and event contracts :contentReference[oaicite:4]{index=4}  
@@ -49,7 +49,7 @@ This series aims to make that trust **legible** and **actionable** through small
 
 ---
 
-## 🔗 Portfolio & Writing  
+## Portfolio & Writing  
 - Medium: https://medium.com/@rtfenter  
 - LinkedIn: https://www.linkedin.com/in/rtfenter/  
 - GitHub: https://github.com/rtfenter
