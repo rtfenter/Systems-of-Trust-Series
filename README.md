@@ -8,6 +8,22 @@ My goal: translate abstract trust & governance concepts into practical tools and
 
 ---
 
+## Why This Matters for Product Strategy
+
+Trust is a product problem long before it becomes an engineering problem.
+
+Stronger contracts, cleaner governance, and clearer ownership boundaries lead directly to:
+
+- **fewer incidents** caused by silent mismatches and schema drift  
+- **faster integrations** between teams, markets, and external partners  
+- **less data corruption** and fewer analytics/ML inconsistencies  
+- **safer compliance and privacy posture**, grounded in explicit boundaries  
+- **greater platform extensibility**, because new features don’t break old ones  
+
+These prototypes are not engineering artifacts — they are product tools that help teams see, reason about, and align on system truth before it becomes expensive to fix.
+
+---
+
 ## Writing  
 A curated selection of essays exploring governance, event contracts, drift, and system truth.
 
@@ -222,6 +238,27 @@ This series aims to make that trust **legible** and **actionable** through essay
 
 ---
 
+## Product Architecture Philosophy
+
+Every system carries an implicit philosophy — a shape that determines what breaks, what drifts, and what stays coherent under pressure.
+
+My approach to product architecture is built on three principles:
+
+1. **Meaning is a first-class API**  
+   Systems fail when teams stop agreeing on what things mean.  
+   Product’s role is to preserve shared definitions across services, versions, and time.
+
+2. **Governance is design, not documentation**  
+   Boundaries, contracts, invariants, and ownership rules are part of the product surface — not an afterthought or a Confluence page.
+
+3. **Trust scales when friction scales predictably**  
+   Healthy systems bend without fracturing.  
+   Architecture succeeds when exceptions, upgrades, and integrations behave the way teams expect.
+
+This series expresses that philosophy through tools, diagrams, and small artifacts that make invisible system behaviors visible.
+
+---
+
 ## Portfolio & Writing  
 - Medium: https://medium.com/@rtfenter  
 - LinkedIn: https://www.linkedin.com/in/rtfenter/  
@@ -231,3 +268,16 @@ This series aims to make that trust **legible** and **actionable** through essay
 
 ## About This Repo  
 This repository is the **series hub** for Systems of Trust — writing, diagrams, prototypes, and system models.
+
+---
+
+## Technologies Used
+
+These prototypes are intentionally lightweight — fast to build, easy to fork, and simple to reason about.
+
+- **HTML / CSS / JavaScript**  
+- **GitHub Pages for static hosting**  
+- **No backend required**  
+
+The goal is clarity, not complexity: high-signal tools that communicate system behavior without infrastructure overhead.
+
