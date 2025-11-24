@@ -8,6 +8,19 @@ My goal: translate abstract trust & governance concepts into practical tools and
 
 ---
 
+## Purpose of This Series  
+
+Trust in distributed systems isn’t just about uptime or retries. It emerges from:
+
+- clear event contracts and shared language  
+- safe handling of exceptions without losing integrity  
+- traceable ownership and observability to prevent drift  
+- routing and boundaries that behave the way teams think they do  
+
+This series aims to make that trust **legible** and **actionable** through essays, diagrams, and small, high-signal prototypes.
+
+---
+
 ## Why This Matters for Product Strategy
 
 Trust is a product problem long before it becomes an engineering problem.
@@ -21,6 +34,28 @@ Stronger contracts, cleaner governance, and clearer ownership boundaries lead di
 - **greater platform extensibility**, because new features don’t break old ones  
 
 These prototypes are not engineering artifacts — they are product tools that help teams see, reason about, and align on system truth before it becomes expensive to fix.
+
+---
+
+## Product Architecture Philosophy
+
+Every system carries an implicit philosophy — a shape that determines what breaks, what drifts, and what stays coherent under pressure.
+
+My approach to product architecture is built on three principles:
+
+1. **Meaning is a first-class API**  
+   Systems fail when teams stop agreeing on what things mean.  
+   Product’s role is to preserve shared definitions across services, versions, and time.
+
+2. **Governance is design, not documentation**  
+   Boundaries, contracts, invariants, and ownership rules are part of the product surface — not an afterthought or a Confluence page.
+
+3. **Trust scales when friction scales predictably**  
+   Healthy systems bend without fracturing.  
+   Architecture succeeds when exceptions, upgrades, and integrations behave the way teams expect.
+
+This series expresses that philosophy through tools, diagrams, and small artifacts that make invisible system behaviors visible.
+
 
 ---
 
@@ -223,39 +258,6 @@ These diagrams illustrate how trust behaves inside distributed systems.
     Trust lives where routing logic
     and ownership boundaries stay aligned.
 
----
-
-## Purpose of This Series  
-
-Trust in distributed systems isn’t just about uptime or retries. It emerges from:
-
-- clear event contracts and shared language  
-- safe handling of exceptions without losing integrity  
-- traceable ownership and observability to prevent drift  
-- routing and boundaries that behave the way teams think they do  
-
-This series aims to make that trust **legible** and **actionable** through essays, diagrams, and small, high-signal prototypes.
-
----
-
-## Product Architecture Philosophy
-
-Every system carries an implicit philosophy — a shape that determines what breaks, what drifts, and what stays coherent under pressure.
-
-My approach to product architecture is built on three principles:
-
-1. **Meaning is a first-class API**  
-   Systems fail when teams stop agreeing on what things mean.  
-   Product’s role is to preserve shared definitions across services, versions, and time.
-
-2. **Governance is design, not documentation**  
-   Boundaries, contracts, invariants, and ownership rules are part of the product surface — not an afterthought or a Confluence page.
-
-3. **Trust scales when friction scales predictably**  
-   Healthy systems bend without fracturing.  
-   Architecture succeeds when exceptions, upgrades, and integrations behave the way teams expect.
-
-This series expresses that philosophy through tools, diagrams, and small artifacts that make invisible system behaviors visible.
 
 ---
 
