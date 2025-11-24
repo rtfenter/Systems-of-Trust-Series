@@ -88,7 +88,7 @@ These projects each have their own repo and contribute to the broader Systems of
 | **Event Quality Scanner** | Validate a single event against naming, types, and required fields | https://rtfenter.github.io/Event-Quality-Scanner/ | https://github.com/rtfenter/Event-Quality-Scanner |
 | **Event Consistency Checker** | Compare two events for structural and semantic mismatches | https://rtfenter.github.io/Event-Consistency-Checker/ | https://github.com/rtfenter/Event-Consistency-Checker |
 | **Truth Drift Map — System Edition** | Visualize meaning & schema drift over time and across services | https://rtfenter.github.io/Truth-Drift-Map/ | https://github.com/rtfenter/Truth-Drift-Map |
-| **Cross-Service Meaning Alignment Explorer** | Compare service interpretations of a concept to detect semantic drift | https://rtfenter.github.io/Cross-Service-Meaning-Explorer/ | https://github.com/rtfenter/Cross-Service-Meaning-Explorer |
+| **Cross-Service Meaning Comparator** | Compare service interpretations of a concept to detect semantic drift | https://rtfenter.github.io/Cross-Service-Meaning-Comparator/ | https://github.com/rtfenter/Cross-Service-Meaning-Comparator |
 | **Schema Evolution Impact Analyzer** | Check if v2 schema changes break downstream services | https://rtfenter.github.io/Schema-Evolution-Impact-Analyzer/ | https://github.com/rtfenter/Schema-Evolution-Impact-Analyzer |
 | **Event Routing Contract Checker** | Validate routing rules & filtering logic before events ship | https://rtfenter.github.io/Event-Routing-Contract-Checker/ | https://github.com/rtfenter/Event-Routing-Contract-Checker |
 | **Ownership Boundary Validator** | Highlight where fields cross privacy/legal/domain boundaries | https://rtfenter.github.io/Ownership-Boundary-Validator/ | https://github.com/rtfenter/Ownership-Boundary-Validator |
@@ -118,11 +118,11 @@ A visual map of how meaning, schema, and invariants drift across services and ve
 
 ---
 
-### • Cross-Service Meaning Alignment Explorer  
+### • Cross-Service Meaning Comparator  
 An interactive explorer that compares how different services interpret the same concept — enums, invariants, and local rules — to surface semantic misalignment before it becomes production drift.
 
-- **Live Demo:** https://rtfenter.github.io/Cross-Service-Meaning-Explorer/  
-- **Repo:** https://github.com/rtfenter/Cross-Service-Meaning-Explorer  
+- **Live Demo:** https://rtfenter.github.io/Cross-Service-Meaning-Comparator/  
+- **Repo:** https://github.com/rtfenter/Cross-Service-Meaning-Comparator  
 
 ---
 
