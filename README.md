@@ -9,7 +9,7 @@ My goal: translate abstract trust & governance concepts into practical tools and
 ---
 
 ## Writing  
-Core essays in the Systems of Trust Series:
+A curated selection of essays exploring governance, event contracts, drift, and system truth.
 
 - **[Designing for Truth: Event Contracts as Product Design](https://medium.com/@rtfenter/designing-for-truth-event-contracts-as-product-design-bf9e1feb9189)**  
 - **[Designing Flexibility Without Drift: The Real Work of Exception Handling](https://medium.com/@rtfenter/exceptions-not-excuses-designing-systems-that-bend-without-breaking-b1c7c7fe177c)**  
@@ -27,46 +27,207 @@ Core essays in the Systems of Trust Series:
 
 ---
 
-## Projects 
+## Projects  
 These projects each have their own repo and contribute to the broader Systems of Trust portfolio.
-
-### • Event Consistency Checker  
-A small interactive tool comparing two JSON events for naming, typing, and structural mismatches.
-
-- **Live Demo:** https://rtfenter.github.io/Event-Consistency-Checker/  
-- **Repo:** https://github.com/rtfenter/Event-Consistency-Checker
 
 ### • Event Quality Scanner  
 A tiny governance checker that validates a single JSON event against required fields, type rules, naming conventions, and domain constraints.
 
 - **Live Demo:** https://rtfenter.github.io/Event-Quality-Scanner/  
-- **Repo:** https://github.com/rtfenter/Event-Quality-Scanner
+- **Repo:** https://github.com/rtfenter/Event-Quality-Scanner  
+
+---
+
+### • Event Consistency Checker  
+A small interactive tool comparing two JSON events for naming, typing, and structural mismatches.
+
+- **Live Demo:** https://rtfenter.github.io/Event-Consistency-Checker/  
+- **Repo:** https://github.com/rtfenter/Event-Consistency-Checker  
+
+---
 
 ### • Truth Drift Map — System Edition  
 A visual map of how meaning, schema, and invariants drift across services and versions in distributed systems.
 
-- **Live Demo:** https://rtfenter.github.io/Truth-Drift-Map  
-- **Repo:** https://github.com/rtfenter/Truth-Drift-Map
+- **Live Demo:** https://rtfenter.github.io/Truth-Drift-Map/  
+- **Repo:** https://github.com/rtfenter/Truth-Drift-Map  
+
+---
+
+### • Cross-Service Meaning Alignment Explorer  
+An interactive explorer that compares how different services interpret the same concept — enums, invariants, and local rules — to surface semantic misalignment before it becomes production drift.
+
+- **Live Demo:** https://rtfenter.github.io/Cross-Service-Meaning-Explorer/  
+- **Repo:** https://github.com/rtfenter/Cross-Service-Meaning-Explorer  
+
+---
+
+### • Schema Evolution Impact Analyzer  
+A small interactive tool that compares schema versions and highlights which downstream services are at risk when v2 ships — including unknown fields, removed fields, and type changes.
+
+- **Live Demo:** https://rtfenter.github.io/Schema-Evolution-Impact-Analyzer/  
+- **Repo:** https://github.com/rtfenter/Schema-Evolution-Impact-Analyzer  
+
+---
+
+### • Event Routing Contract Checker  
+An interactive tool that validates routing rules and filtering logic before events ship, catching misrouted or silently dropped events at design time.
+
+- **Live Demo:** https://rtfenter.github.io/Event-Routing-Contract-Checker/  
+- **Repo:** https://github.com/rtfenter/Event-Routing-Contract-Checker  
+
+---
+
+### • Ownership Boundary Validator  
+An interactive boundary map that shows where a field crosses privacy, legal, or domain ownership lines it shouldn’t — before data moves across systems.
+
+- **Live Demo:** https://rtfenter.github.io/Ownership-Boundary-Validator/  
+- **Repo:** https://github.com/rtfenter/Ownership-Boundary-Validator  
+
+---
+
+## System Diagrams  
+These diagrams illustrate how trust behaves inside distributed systems.
+
+### Event Contract Flow — From Producer to Consumers
+
+    [Producer Service]
+          |
+          v
+    [Event Created]
+      - name
+      - schema version
+      - required fields
+          |
+          v
+    [Contract Validator]
+      - field presence & types
+      - enums / invariants
+      - domain-specific rules
+          |
+          v
+    [Event Bus / Stream]
+          |
+          v
+    [Consumers]
+      - services
+      - analytics
+      - ML
+      - audits
+
+    If the contract is weak here,
+    every downstream system negotiates its own “truth”.
+
+---
+
+### Truth Drift Map — Services & Versions
+
+              [Canonical Definition]
+             (event + meaning + invariants)
+                         |
+         ----------------------------------------
+         |                  |                  |
+         v                  v                  v
+     [Service A]        [Service B]        [Service C]
+      v1, v2             v1 only            v2 + local enum
+
+    Examples:
+    - Service A adds new enum values
+    - Service B never upgrades schema
+    - Service C reuses a field for a new concept
+
+    Result:
+    - different meanings for the same field name
+    - broken joins, inconsistent analytics
+    - incidents that are “interpretation disputes”
+      instead of clear facts
+
+---
+
+### Schema Evolution Impact View
+
+    [Schema v1]
+      - fields: A, B, C
+      - types: string, int, enum
+
+        |
+        |  (proposed change)
+        v
+
+    [Schema v2]
+      - A -> renamed to A_id
+      - B -> type int → string
+      - D -> new required field
+
+    Downstream Services:
+
+    - Service X
+        expects A, B
+        breaks on rename + type change
+
+    - Service Y
+        ignores A
+        optional read of C
+        safe, but may miss new D semantics
+
+    - Service Z
+        strict validator on v1
+        treats v2 as invalid and drops events
+
+    Impact:
+    - silent drops
+    - partial upgrades
+    - version skew across the estate
+
+---
+
+### Routing & Boundary Overview
+
+                   [Incoming Event]
+                           |
+                           v
+                [Routing Rules & Filters]
+                - field-based conditions
+                - version-aware checks
+                - region / consent logic
+                           |
+          ------------------------------------
+          |                  |               |
+          v                  v               v
+     [Topic A]          [Queue B]       [Drop / DLQ]
+
+    In parallel:
+
+    [Ownership Map]
+    - Who owns each field?
+    - Which systems are allowed to see it?
+    - Where does it become a privacy, legal,
+      or domain boundary violation?
+
+    Trust lives where routing logic
+    and ownership boundaries stay aligned.
 
 ---
 
 ## Purpose of This Series  
-Trust in distributed systems isn’t just about protocols or validation.  
-It emerges from:  
-- shared language and event contracts :contentReference[oaicite:4]{index=4}  
-- safe handling of exceptions without losing integrity :contentReference[oaicite:5]{index=5}  
-- clear data ownership and observability to prevent drift :contentReference[oaicite:6]{index=6}
 
-This series aims to make that trust **legible** and **actionable** through small prototypes, artifacts, and thought work.
+Trust in distributed systems isn’t just about uptime or retries. It emerges from:
+
+- clear event contracts and shared language  
+- safe handling of exceptions without losing integrity  
+- traceable ownership and observability to prevent drift  
+- routing and boundaries that behave the way teams think they do  
+
+This series aims to make that trust **legible** and **actionable** through essays, diagrams, and small, high-signal prototypes.
 
 ---
 
 ## Portfolio & Writing  
 - Medium: https://medium.com/@rtfenter  
 - LinkedIn: https://www.linkedin.com/in/rtfenter/  
-- GitHub: https://github.com/rtfenter
+- GitHub: https://github.com/rtfenter  
 
 ---
 
 ## About This Repo  
-This repository is the **series hub** for Systems of Trust — writing, diagrams, prototypes, and system models. 
+This repository is the **series hub** for Systems of Trust — writing, diagrams, prototypes, and system models.
