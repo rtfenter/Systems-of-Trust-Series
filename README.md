@@ -66,15 +66,13 @@ A curated selection of essays exploring governance, event contracts, drift, and 
 - **[Designing Flexibility Without Drift: The Real Work of Exception Handling](https://medium.com/@rtfenter/exceptions-not-excuses-designing-systems-that-bend-without-breaking-b1c7c7fe177c)**  
 - **[When Data Wanders Off](https://medium.com/@rtfenter/when-data-wanders-off-d34e8dabb2cd)**  
 
-### Coming Next
-- **Making Drift Visible** — audits, parity checks  
-  *Systems must remember what they were built to mean.*  
+Planned essays on governance, drift, exception handling, and system truth.
+(These essays are not yet written — titles represent upcoming work.)
 
-- **The Spike Test** — signal vs noise, responsible diagnosis  
-  *Interpretation before reaction = coherence.*  
+- Making Drift Visible  
+- The Spike Test  
+- When Success Breaks You  
 
-- **When Success Breaks You** — scaling, feedback, self-learning architecture  
-  *Stability and learning are recursive, not opposite.*
 
 ---
 
